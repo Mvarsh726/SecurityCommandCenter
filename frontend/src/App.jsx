@@ -151,10 +151,6 @@ useEffect(() => {
         You are viewing the {activePage} section.
       </p>
 
-      <div className="status">
-        🟢 System Status: Operational
-      </div>
-
         {activePage === 'Dashboard' && (
           <section className="overview">
             <h2>Security Overview</h2>
@@ -330,7 +326,7 @@ useEffect(() => {
                 {Object.entries(securityHeaders).map(([header, value]) => (
                   <div key={header} className="header-result">
                     <p>
-                      {value ? '✅' : '⚠️'} {header}
+                      {header}
                     </p>
 
                     <span className="header-value">
@@ -398,8 +394,8 @@ useEffect(() => {
                     <h3>{header}</h3>
                     <p>
                       {value
-                        ? '✅ Header detected'
-                        : '⚠️ Header not detected — review recommended'}
+                        ? ' Header detected'
+                        : ' Header not detected — review recommended'}
                     </p>
                   </div>
                 ))}
